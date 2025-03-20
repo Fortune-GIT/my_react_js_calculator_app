@@ -1,1 +1,0 @@
-# my_react_js_calculator_app
