@@ -11,7 +11,7 @@ function App() {
         <form action="">
           <div className='display'>
             {/* <input type="text" value={value} /> */}
-            <textarea rows="4" value={value} />
+            <textarea rows="4" value={value} readOnly />
           </div>
           <div>
             <input type="button" value="AC" onClick={() => setValue('')} />
