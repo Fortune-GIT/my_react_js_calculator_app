@@ -27,23 +27,41 @@ form input {
   cursor: pointer;
 }
 form input[type="button"]:hover {
-  background-color: blueviolet;
+  background-color: rgb(25, 20, 31);
+}
+form input[type="button"]:active {
+  background-color: rgb(103, 103, 104);
 }
 
 form .display {
-  display: flex;
-  justify-content: flex-end;
-  margin: 5px 0px 20px 0px;
+  /* display: flex;
+  flex-direction: flex-end; */
+  margin: 10px 10px 12px 1px;
 }
 
-form .display input {
+/* form .display input {
   text-align: right;
   flex: 1;
-  font-size: 40px;
+  font-size: 15px;
   padding: 5px 10px;
   background-color: rgb(64, 64, 64);
-}
+} */
 
 form input.equal {
   width: 123px;
+}
+
+form .display textarea {
+  width: 100%;
+  font-size: 14.5px;
+  padding: 4px;
+  background-color: rgb(68, 68, 73);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  resize: vertical;
+  text-align: right;
+  line-height: 1.4;
+  font-weight: bold;
+  
 }

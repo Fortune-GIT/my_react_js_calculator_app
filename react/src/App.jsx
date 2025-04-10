@@ -10,7 +10,8 @@ function App() {
       <div className='calculator'>
         <form action="">
           <div className='display'>
-            <input type="text" value={value} />
+            {/* <input type="text" value={value} /> */}
+            <textarea rows="4" value={value} />
           </div>
           <div>
             <input type="button" value="AC" onClick={() => setValue('')} />
