@@ -40,7 +40,33 @@ function App() {
           <div>
             <input type="button" value="00" onClick={e => setValue(value + e.target.value)} />
             <input type="button" value="0" onClick={e => setValue(value + e.target.value)} />
-            <input type="button" value="=" className='equal' onClick={() => {setValue(evaluate(value))}} />
+            <input
+                type="button"
+                value="_"
+                onClick={() => {
+                  // Only allow "_" if the last character is a number
+                  const lastChar = value.slice(-1);
+                  if (/\d/.test(lastChar)) {
+                    setValue(value + "_");
+                  }
+                }}
+              />
+            <input
+              type="button"
+              value="="
+              className="equal"
+              onClick={() => {
+                try {
+                  const sanitized = value.replaceAll('_', '');
+                  const result = evaluate(sanitized);
+                  setValue(result.toString());
+                } catch (error) {
+                  setValue("Error");
+                  console.error("Evaluation error:", error);
+                }
+              }}
+            />
+            
           </div>
         </form>
       </div>
